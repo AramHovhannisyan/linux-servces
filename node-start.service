@@ -1,0 +1,13 @@
+[Unit]
+Description=NPM Start
+After=network.target
+
+[Service]
+Environment=test=4321 PATH=/bin:<absolute path to node bin directory>
+Type=simple
+User=<Non-root user>
+ExecStart=<absolute path to .sh script>
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
